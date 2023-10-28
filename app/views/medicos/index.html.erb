@@ -1,0 +1,24 @@
+<h1>Lista de Médicos</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Especialização</th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @medicos.each do |medico| %>
+    <tr>
+      <td><%= medico.nome %></td>
+      <td><%= medico.especializacao %></td>
+      <td><%= medico.email %></td>
+      <td><%= link_to 'Detalhes', medico %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Adicionar Médico', new_medico_path %>

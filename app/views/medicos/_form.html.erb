@@ -1,0 +1,20 @@
+<%= form_with(model: @medico, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :especializacao %>
+    <%= form.text_field :especializacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Salvar Perfil' %>
+  </div>
+<% end %>
