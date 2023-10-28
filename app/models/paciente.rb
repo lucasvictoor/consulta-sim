@@ -1,6 +1,6 @@
 class Paciente < ApplicationRecord
-  has_one :endereco
-  has_many :consultas
+  has_one :endereco, dependent: :destroy
+  has_many :consultas, dependent: :destroy
 
   #Validations
   validates :nome_completo, presence: true, length: { maximum: 255 }

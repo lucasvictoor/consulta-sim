@@ -1,5 +1,5 @@
 class Medico < ApplicationRecord
-  has_many :consultas, foreign_key: 'medico_id'
+  has_many :consultas, foreign_key: 'medico_id', dependent: :destroy
   attr_accessor :especializacao
   attr_accessor :nome, :cpf, :email, :crm
 
