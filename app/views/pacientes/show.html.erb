@@ -1,0 +1,9 @@
+<h1>Detalhes do Paciente</h1>
+
+<p><strong>Nome:</strong> <%= @paciente.nome_completo %></p>
+<p><strong>Data de Nascimento:</strong> <%= @paciente.data_nascimento %></p>
+<p><strong>CPF:</strong> <%= @paciente.cpf %></p>
+<p><strong>E-mail:</strong> <%= @paciente.email %></p>
+
+<%= link_to 'Editar', edit_paciente_path(@paciente) %> |
+<%= link_to 'Voltar', pacientes_path %>
