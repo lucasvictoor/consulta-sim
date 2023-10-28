@@ -1,0 +1,20 @@
+<h1>Consultas Agendadas para <%= @medico.nome %></h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Paciente</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @consultas.each do |consulta| %>
+    <tr>
+      <td><%= consulta.data %></td>
+      <td><%= consulta.hora %></td>
+      <td><%= consulta.paciente.nome %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

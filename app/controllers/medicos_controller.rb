@@ -39,3 +39,8 @@ class MedicosController < ApplicationController
     params.require(:medico).permit(:nome, :especializacao, :email, :cpf, :crm)
   end
 end
+
+def consultas
+  @medico = Medico.find(params[:id])
+  @consultas = @medico.consultas
+end
