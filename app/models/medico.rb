@@ -1,5 +1,5 @@
 class Medico < ApplicationRecord
   has_many :consultas
   attr_accessor :especializacao
-  attr_accessor :email
+  attr_accessor :nome, :cpf, :email, :crm
 end
