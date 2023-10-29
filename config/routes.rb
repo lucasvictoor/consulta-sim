@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
   resources :pacientes
   resources :consultas
   resources :medicos
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
     resources :consultas, only: [:index]
   end
 
-  root 'pacientes#index' #página inicial
+  root 'welcome#index' #página inicial
 end
 
 
