@@ -1,7 +1,5 @@
 class Medico < ApplicationRecord
-  has_many :consultas, foreign_key: 'medico_id', dependent: :destroy
-  attr_accessor :especializacao
-  attr_accessor :nome, :cpf, :email, :crm
+  has_many :consultas, dependent: :destroy
 
   #Validations
   validates :especialidade, presence: true, length: { maximum: 255 }
