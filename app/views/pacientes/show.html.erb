@@ -5,9 +5,36 @@
 <p><strong>CPF:</strong> <%= @paciente.cpf %></p>
 <p><strong>E-mail:</strong> <%= @paciente.email %></p>
 
-<%= link_to 'Editar', edit_paciente_path(@paciente) %> |
-<%= link_to 'Voltar', pacientes_path %>
+<div class="button-bar">
+  <%= link_to 'Editar', edit_paciente_path(@paciente) %>
+  <%= link_to 'Voltar', pacientes_path %>
+</div>
 
 <h2>Agendar Consulta</h2>
 
 <%= render 'consultas/form' %>
+
+<style>
+    body {
+        background-color: #add8e6;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    p {
+        color: #0074e4;
+    }
+
+    a {
+        text-decoration: none;
+        color: #0074e4;
+    }
+
+    .button-bar a {
+        margin-right: 10px;
+    }
+</style>
