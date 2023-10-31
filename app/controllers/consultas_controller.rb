@@ -15,4 +15,10 @@ class ConsultasController < ApplicationController
       render :new
     end
   end
+
+  private
+
+  def consulta_params
+    params.require(:consulta).permit(:data, :medico_id, :paciente_id)
+  end
 end
