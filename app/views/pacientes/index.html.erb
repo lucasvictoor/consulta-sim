@@ -1,6 +1,8 @@
 <style>
     body {
         background-color: #add8e6;
+        text-align: center;
+        font-family: Arial, sans-serif;
     }
 
     h1, h2 {
@@ -14,11 +16,25 @@
 
     ul li {
         margin-bottom: 10px;
+        position: relative;
     }
 
     a {
         text-decoration: none;
         color: #0074e4;
+    }
+
+    .separator {
+        display: flex;
+        justify-content: center;
+    }
+
+    .separator::before, .separator::after {
+        content: "";
+        width: 5%;
+        height: 1px;
+        background-color: white;
+        display: block;
     }
 </style>
 
@@ -28,8 +44,10 @@
 <ul>
   <% @pacientes.each do |paciente| %>
     <li><%= link_to paciente.nome_completo, paciente %></li>
+    <div class="separator"></div>
   <% end %>
 </ul>
 
 <%= link_to 'Novo Paciente', new_paciente_path %>
+<div class="separator"></div>
 <%= link_to 'Voltar para à Home Page', root_path %>
