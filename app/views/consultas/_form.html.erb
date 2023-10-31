@@ -1,7 +1,7 @@
 <%= form_with(model: @consulta, url: consultas_path) do |form| %>
   <div class="field">
     <%= form.label :data %>
-    <%= form.datetime_local_field :data, min: Time.current %>
+    <%= form.date_field :data, min: Time.current %>
   </div>
 
   <div class="field">
