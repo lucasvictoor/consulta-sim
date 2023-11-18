@@ -1,4 +1,4 @@
-#História de usuário: Anexar documentos médicos.
+#História de usuário que foi usado: Anexar documentos médicos.
 
 Dado("Existe um médico cadastrado no sistema") do
   @medico_crm = 'CRM123'
