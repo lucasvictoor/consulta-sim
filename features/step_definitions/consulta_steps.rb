@@ -1,4 +1,4 @@
-#História de usuário: Reserva de consulta.
+#História de usuário que foi usada: Reserva de consulta.
 
 Given('o médico está na página de reserva de consultas') do
   visit '/reserva_consultas'
