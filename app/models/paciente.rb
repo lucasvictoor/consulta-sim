@@ -2,6 +2,7 @@ class Paciente < ApplicationRecord
   has_one :endereco, dependent: :destroy
   has_many :consultas, dependent: :destroy
   accepts_nested_attributes_for :endereco
+  has_many :medicos, through: :consultas
 
   #Validations
   validates :nome_completo, presence: true, length: { maximum: 255 }

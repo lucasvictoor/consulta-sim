@@ -1,5 +1,6 @@
 class Medico < ApplicationRecord
   has_many :consultas, dependent: :destroy
+  has_many :pacientes, through: :consultas
 
   #Validations
   validates :especialidade, presence: true, length: { maximum: 255 }
