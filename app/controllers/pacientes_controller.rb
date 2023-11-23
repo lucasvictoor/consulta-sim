@@ -46,4 +46,9 @@ class PacientesController < ApplicationController
   def paciente_params
     params.require(:paciente).permit(:nome_completo, :data_nascimento, :cpf, :email)
   end
+
+  def paciente_params
+    params.require(:paciente).permit(:nome_completo, :data_nascimento, :cpf, :email,
+                                     endereco_attributes: [:id, :rua, :numero, :cidade, :estado, :cep])
+  end
 end

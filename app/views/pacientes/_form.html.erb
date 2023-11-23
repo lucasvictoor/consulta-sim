@@ -19,7 +19,15 @@
     <%= form.email_field :email %>
   </div>
 
+  <%= form.fields_for :endereco do |endereco_form| %>
+    <div class="field">
+      <%= endereco_form.label :rua %>
+      <%= endereco_form.text_field :rua %>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>
